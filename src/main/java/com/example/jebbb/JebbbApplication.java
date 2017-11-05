@@ -9,4 +9,9 @@ public class JebbbApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(JebbbApplication.class, args);
 	}
+	
+	@Override
+    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+        return application.sources(Application.class);
+    }
 }
